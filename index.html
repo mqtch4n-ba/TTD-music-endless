@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>駅メロ・エンドレスプレイヤー</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- index.html の display 部分を書き換え -->
+    <div class="display">
+        <div id="line" style="color: #00bcff; font-weight: bold;">--- 線</div> <!-- ここを追加 -->
+        <div id="station" class="station">--- 駅</div>
+        <div id="title" class="title">準備完了</div>
+        <div id="desc" class="desc">ボタンを押すと再生を開始します</div>
+    </div>
+
+    <div class="controls">
+        <button id="btn-next" onclick="playNext()">次の曲を再生（ランダム）</button>
+        <button id="btn-endless" onclick="toggleEndless()">エンドレス：OFF</button>
+    </div>
+
+    <script>
+        let songList = [];
+        let isEndless = false;
+        const audio = new Audio();
+
+        // 1. JSONデータの読み込み
+        fetch('songs.json')
+            .then(res => res.json())
+            .then(data => {
+                songList = data;
+                console.log("読み込み完了:", songList);
+            })
+            .catch(err => console.error("データの読み込みに失敗しました:", err));
+
+        // 2. 次の曲をランダムに再生する関数
+        // playNext 関数の中身を少し書き換え
+        function playNext() {
+            if (songList.length === 0) return;
+        
+            const target = songList[Math.floor(Math.random() * songList.length)];
+        
+            // 画面表示を更新
+            document.getElementById('line').innerText = target.line; // ここを追加！
+            document.getElementById('station').innerText = target.station;
+            document.getElementById('title').innerText = target.title;
+            document.getElementById('desc').innerText = target.desc;
+        
+            audio.src = `audio/${target.file}`;
+            audio.play();
+        }
+
+        // 3. エンドレスモードの切り替え
+        function toggleEndless() {
+            isEndless = !isEndless;
+            const btn = document.getElementById('btn-endless');
+            btn.innerText = `エンドレス：${isEndless ? 'ON' : 'OFF'}`;
+            btn.classList.toggle('active', isEndless);
+        }
+
+        // 4. 曲が終わった時の処理
+        audio.onended = () => {
+            if (isEndless) {
+                playNext(); // エンドレスONなら自動で次へ
+            }
+        };
+    </script>
+</body>
+</html>

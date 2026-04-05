@@ -1,0 +1,103 @@
+/* 全体の設定 */
+body {
+    background-color: #f0f0f0;
+    font-family: 'M PLUS 1p', "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    display: flex;
+    flex-direction: column; /* 上下に並べる */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 駅名標（サインボード）本体 */
+.display {
+    background: white;
+    border-top: 45px solid #008030;    /* JR東日本風の緑 */
+    border-bottom: 12px solid #ccc;
+    padding: 30px 60px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    min-width: 450px;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 40px; /* ボタンとの間隔 */
+}
+
+/* 緑色の帯の中に表示する駅名 */
+#station {
+    font-size: 1.2rem;
+    position: absolute;
+    top: -38px;
+    left: 20px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+/* 路線名（緑の帯の右側） */
+#line {
+    position: absolute;
+    top: -38px;
+    right: 20px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* 曲タイトル（駅名標の中央） */
+#title {
+    font-size: 3.2rem;
+    margin: 15px 0;
+    color: #333;
+    font-weight: 700;
+    border-bottom: 3px solid #333;
+    padding-bottom: 5px;
+}
+
+/* 説明文 */
+#desc {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 15px;
+    min-height: 1.5em;
+}
+
+/* ボタンエリア */
+.controls {
+    display: flex;
+    gap: 20px;
+}
+
+/* ボタンを「切符」や「案内看板」風のデザインに */
+button {
+    background: #fff;
+    border: 2px solid #008030;
+    color: #008030;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 0 #005520; /* 立体感 */
+}
+
+button:hover {
+    background: #f0fff0;
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #005520;
+}
+
+button:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+/* エンドレスON時のスタイル */
+#btn-endless.active {
+    background: #ff4500;
+    color: white;
+    border-color: #b22222;
+    box-shadow: 0 4px 0 #8b0000;
+}
