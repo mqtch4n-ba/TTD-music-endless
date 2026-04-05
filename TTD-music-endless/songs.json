@@ -1,0 +1,73 @@
+[
+
+  {
+    "file": "JRE-IKST-010-01.wav",
+    "station": "新宿14,東京4など",
+    "line": "山手線",
+    "title": "JRE-IKST-010-01",
+    "desc": "ピアノ曲、新宿14にて初採用"
+  },
+  {
+    "file": "JRE-IKST-010-02.wav",
+    "station": "新宿15,東京5など",
+    "line": "山手線",
+    "title": "JRE-IKST-010-02",
+    "desc": "新宿15にて初採用"
+  },
+  {
+    "file": "JRE-IKST-010-03.wav",
+    "station": "大崎2",
+    "line": "山手線",
+    "title": "JRE-IKST-010-03",
+    "desc": "ハープ系の音色。"
+  },
+  {
+    "file": "JRE-IKST-010-04.wav",
+    "station": "品川3(内回り)",
+    "line": "山手線",
+    "title": "JRE-IKST-010-04",
+    "desc": "通常不使用"
+  },
+  {
+    "file": "JRE-IKST-010-05.wav",
+    "station": "大崎4",
+    "line": "山手線",
+    "title": "JRE-IKST-010-05",
+    "desc": "初採用駅・当駅限定"
+  },
+  {
+    "file": "JRE-IKST-001-01.wav",
+    "station": "東京京葉4,八丁堀2など",
+    "line": "京葉線",
+    "title": "JRE-IKST-001-01",
+    "desc": "京葉線上り本線用である。"
+  },
+  {
+    "file": "JRE-IKST-001-02.wav",
+    "station": "東京京葉3,八丁堀1など",
+    "line": "京葉線",
+    "title": "JRE-IKST-001-02",
+    "desc": "京葉線下り本線用である。"
+  },
+  {
+    "file": "JRE-IKST-001-04.wav",
+    "station": "新浦安4,新習志野3",
+    "line": "京葉線",
+    "title": "JRE-IKST-001-04",
+    "desc": "京葉線上り副本線用である。"
+  },
+  {
+    "file": "JRE-IKST-001-05.wav",
+    "station": "千葉みなと2",
+    "line": "京葉線",
+    "title": "JRE-IKST-001-05",
+    "desc": "京葉線副本線上下兼用である。"
+  },
+  {
+    "file": "JRE-IKST-001-07.wav",
+    "station": "新浦安1,新習志野2",
+    "line": "京葉線",
+    "title": "JRE-IKST-001-07",
+    "desc": "京葉線下り副本線用である。"
+  }
+]
